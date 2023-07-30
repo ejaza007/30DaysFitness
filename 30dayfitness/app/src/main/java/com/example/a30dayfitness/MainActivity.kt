@@ -149,13 +149,34 @@ Row(verticalAlignment = Alignment.CenterVertically){
         contentDescription = null
 
     )
+    Text(
+        text = stringResource(id = R.string.app_name),
+        style = MaterialTheme.typography.displayLarge
+    )
 }
 
-        }
+        },
+        modifier = modifier
     )
 }
 
 @Composable
-fun FitnessDesc(){
+fun FitnessDesc(
+    @StringRes fitnessDesc : Int,
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = modifier
+    ) {
+        Text(
+            text = stringResource(id = R.string.description),
+            style = MaterialTheme.typography.labelSmall
+        )
 
+        Text(
+            text = stringResource(fitnessDesc),
+            style = MaterialTheme.typography.bodyLarge
+        )
+
+    }
 }
