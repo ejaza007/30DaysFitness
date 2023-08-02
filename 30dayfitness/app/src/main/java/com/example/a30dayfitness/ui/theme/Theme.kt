@@ -18,6 +18,7 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 
+
 private val LightColors = lightColorScheme(
     primary = md_theme_light_primary,
     onPrimary = md_theme_light_onPrimary,
@@ -110,7 +111,7 @@ fun FitnessTheme(
     MaterialTheme(
         colorScheme = colorScheme,
         shapes = Shapes,
-        typography = kotlin.text.Typography,
+        typography = Typography,
         content = content
     )
 }
